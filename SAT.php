@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos AT</title>
 
-    <link rel="stylesheet" href="Control-Lotes/style/css/bootstrap.min.css">
-    <script src="Control-Lotes/style/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style/css/bootstrap.min.css">
+    <script src="style/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">CAMBIO CAMBIO</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
@@ -53,6 +53,8 @@
             </div>
         </div>
     </nav>
+
+<body>
 </body>
 
 </html>
