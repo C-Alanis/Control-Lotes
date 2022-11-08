@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos AT</title>
 
+    <link rel="stylesheet" href="style/css/estilos-uno.css">
     <link rel="stylesheet" href="style/css/bootstrap.min.css">
     <script src="style/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -14,8 +15,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-<body>
-
+<body class="" id="bodybg">
     <nav class="navbar navbar-expand-lg bg-danger">
         <div class="container-fluid">
             <a class="navbar-brand text-white fs-2 fw-bold" href="#">CONTROL DE LOTES</a>
@@ -41,15 +41,36 @@
         </form>
     </nav>
 
-
-    <div class="content">
-
-    </div>
+    <main class="m-5 p-5">
 
 
+        <!-- 
+        <div class="border border-dark col-5">
 
 
+            <div class="border border-dark col-md-3 text-center">
+                <div class="py-3">
+                    <div class="py-3">
+                        <h1 class="">Modelo Actual</h1>
+                        <h1 class="">0000</h1>
+                    </div>
+                </div>
+            </div>
 
+            <div class="my-5 border border-dark col-3 text-center">
+                <div class="py-3">
+                    <div class="py-3">
+                        <h2>Conteo de piezas</h2>
+                        <br>
+                        <div class="btn btn-success fs-2 col-4">40</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+-->
+
+    </main>
 </body>
 
 
