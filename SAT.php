@@ -43,11 +43,6 @@
 
     <main class="m-5 p-5">
 
-
-        <!-- 
-        <div class="border border-dark col-5">
-
-
             <div class="border border-dark col-md-3 text-center">
                 <div class="py-3">
                     <div class="py-3">
@@ -62,13 +57,12 @@
                     <div class="py-3">
                         <h2>Conteo de piezas</h2>
                         <br>
-                        <div class="btn btn-success fs-2 col-4">40</div>
+                        <input type="text" name="qty" id="">
+                        <br><br>
+                        <div class="py-3 fs-2 bg-success text-white">40</div>
                     </div>
                 </div>
             </div>
-
-        </div>
--->
 
     </main>
 </body>
