@@ -19,27 +19,22 @@
     <nav class="navbar navbar-expand-lg bg-danger">
         <div class="container-fluid">
             <a class="navbar-brand text-white fs-2 fw-bold" href="#">CONTROL DE LOTES</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
         </div>
 
         <form class="container offset-md-7 text-center text-white" role="search">
             <div class="row gx-5">
-            <div class="col h4">
-                <h4>Fecha:&nbsp;</h4>
-                <script>
-                date = new Date().toLocaleDateString();
-                document.write(date);
-                </script>
-            </div>
+                <div class="col h4">
+                    <h4>Fecha:&nbsp;</h4>
+                    <script>
+                    date = new Date().toLocaleDateString();
+                    document.write(date);
+                    </script>
+                </div>
 
-            <div class="col">
-            <h4>Hora:&nbsp;</h4>
-            <h4 id="HoraActual">   </h4>
-            </div>
+                <div class="col">
+                    <h4>Hora:&nbsp;</h4>
+                    <h4 id="HoraActual"> </h4>
+                </div>
 
             </div>
 
@@ -47,8 +42,10 @@
     </nav>
 
 
+    <div class="content">
 
-    
+    </div>
+
 
 
 
