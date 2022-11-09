@@ -2,7 +2,7 @@
 class Modelo_Grafico{
     private $conexion;
     function __construct(){
-        require_once('conexion.php');
+        require_once('conexion2.php');
         $this->conexion=new conexion();
         $this->conexion->conectar();
 
