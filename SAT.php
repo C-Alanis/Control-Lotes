@@ -8,7 +8,7 @@ if(isset($_SERVER['HTTPS'])&& $_SERVER['HTTPS']==='on'){
     $url;
 }
 $page=$url;
-$sec="10";
+$sec="30";
 
 include("config/conexion.php");
 $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
@@ -28,6 +28,7 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
     <link rel="stylesheet" href="style/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/css/style.css">
     <script src="style/js/bootstrap.bundle.min.js"></script>
+    <script src="style/js/habilitar.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
@@ -60,25 +61,25 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
         </form>
     </nav>
 
-    <main class="m-5 p-5">
+    <main class="m-4 p-3">
 
         <div class="border border-dark col-md-3 text-center">
-            <div class="py-3">
-                <div class="py-3">
+            <div class="py-1">
+                <div class="py-1">
                     <h1 class="">Modelo Actual</h1>
                     <?php
                         $resultado=mysqli_query($conexion,$modelos);
                         while($row=mysqli_fetch_assoc($resultado)){
                     ?>
-                            <h1 class="col"><?php echo $row["modelo"];?></h1>
+                    <h1 class="col"><?php echo $row["modelo"];?></h1>
                     <?php }?>
                 </div>
             </div>
         </div>
 
         <div class="my-5 border border-dark col-3 text-center">
-            <div class="py-3">
-                <div class="py-3">
+            <div class="py-1">
+                <div class="py-1">
                     <h2>Conteo de piezas</h2>
                     <br>
                     <input type="text" name="qty" id="">
@@ -88,9 +89,26 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
             </div>
         </div>
 
+
+        <div class="my-5 border border-dark col-3 text-center">
+            <div class="py-1">
+                <div class="py-1">
+                    <form action="">
+                        <h2>Solicitud cambio de modelo</h2>
+                        <br>
+                        <input   type="text" id="txt_1">
+                        <br><br>
+                        <button id="btn" class="btn btn-info" disabled>CAMBIO</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <div class="container-canvas">
             <canvas id="myChart" width="200" height="150"></canvas>
         </div>
+
+
     </main>
 </body>
 
@@ -115,8 +133,8 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-<script>
 
+<script>
 // JavaScript code
 showTime();
 
