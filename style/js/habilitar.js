@@ -2,15 +2,14 @@ function HabilitarBoton(){
     text_1 = document.getElementById("txt_1").value;
     val = 0;
 
-    if(text_1 == ""){
+    if(text_1 == "1007476"){
         val++;
     }
-    if(val == 1){
-        document.getElementById("btn").disabled = false;
+    if(val == 0){
+        document.getElementById("btn").disabled = true;
     }
     else{
-        document.getElementById("btn").disabled = true;
+        document.getElementById("btn").disabled = false;
     }
 }
 document.getElementById("txt_1").addEventListener("keyup", HabilitarBoton);
-document.getElementById("txt_1").addEventListener("change", HabilitarBoton);

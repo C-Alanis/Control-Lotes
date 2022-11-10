@@ -82,9 +82,7 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
                 <div class="py-1">
                     <h2>Conteo de piezas</h2>
                     <br>
-                    <input type="text" name="qty" id="">
-                    <br><br>
-                    <div class="py-3 fs-2 bg-success text-white">40</div>
+                    <input type="text" placeholder="Escanea aqui" autocomplete="off" class="form-control" >
                 </div>
             </div>
         </div>
@@ -94,12 +92,12 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
             <div class="py-1">
                 <div class="py-1">
                     <form action="">
-                        <h2>Solicitud cambio de modelo</h2>
                         <br>
-                        <input   type="text" id="txt_1">
-                        <br><br>
-                        <button id="btn" class="btn btn-info" disabled>CAMBIO</button>
+                        <h2>Solicitud de cambio de modelo</h2><br>
+                        <input type="text" placeholder="Numero de nomina" id="txt_1" autocomplete="off" class="form-control"> <br>
+                        <button id="btn" disabled class="btn btn-info">Enviar</button>
                     </form>
+                    <script src="style/js/habilitar.js"></script>
                 </div>
             </div>
         </div>
