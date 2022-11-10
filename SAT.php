@@ -63,7 +63,7 @@ $sec="10";
             <div class="py-3">
                 <div class="py-3">
                     <h1 class="">Modelo Actual</h1>
-                    <h1 class="">2160</h1>
+                    <h1 class=""></h1>
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@ $sec="10";
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 <script>
-    
+
 // JavaScript code
 showTime();
 
