@@ -1,0 +1,7 @@
+ .container-canvas {
+        /* This could be done in one single declaration. See the extended sample. */
+        margin-right: 100px;
+        margin-left: 700px;
+        margin-top: -600px;
+        width: 800px;
+    }
