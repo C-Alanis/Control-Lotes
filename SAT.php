@@ -21,11 +21,8 @@ $sec="10";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos AT</title>
 
-
-
     <link rel="stylesheet" href="style/css/estilos-uno.css">
     <link rel="stylesheet" href="style/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style/css/style.css">
     <script src="style/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
@@ -38,7 +35,7 @@ $sec="10";
 <body class="" id="bodybg">
     <nav class="navbar navbar-expand-lg bg-danger">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fs-2 fw-bold" href="#">CONTROL DE LOTES</a>
+            <a class="navbar-brand text-white fs-2 fw-bold" href="sat.php">CONTROL DE LOTES</a>
         </div>
 
         <form class="container offset-md-7 text-center text-white" role="search">
@@ -55,9 +52,7 @@ $sec="10";
                     <h4>Hora:&nbsp;</h4>
                     <h4 id="HoraActual"> </h4>
                 </div>
-
             </div>
-
         </form>
     </nav>
   
@@ -69,7 +64,7 @@ $sec="10";
                 <div class="py-3">
                     
                     <h1 class="">Modelo Actual</h1>
-                    <h1 class="">0000</h1>
+                    <h1 class=""></h1>
                 </div>
            
             </div>
@@ -105,10 +100,7 @@ $sec="10";
             </div>
             
         </div>
-        <div class="container-canvas">
-    <canvas id="myChart" width=200" height="150"></canvas>
-    </div>
-    <!---Tarjetas
+
         <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -149,31 +141,38 @@ $sec="10";
             <div class="col-md-12 text-center ">
                 <h2>Reporte de ventas</h2>
             </div>
-           
+            <canvas id="myChart" width="100" height="50"></canvas>
+
         </div>
         <div class="row my-3 ">
             <div class="col-md-12 text-center "></div>
             <canvas id="idcontTabla"></canvas>
         </div>
     </div>
-   --->
 
     </main>
 </body>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+
+
 <script>
-
-
 // JavaScript code
 showTime();
 
@@ -204,62 +203,46 @@ function CargarGrafica() {
     }).done(function(resp) {
         var titulo = [];
         var cantidad = [];
-        var cantidad_a = [];
-        var cantidad_b = [];
         var data = JSON.parse(resp);
         for (var i = 0; i < data.length; i++) {
             titulo.push(data[i][1]);
-            cantidad_a.push(data[i][2]);
-            cantidad_b.push(data[i][3]);
+            cantidad.push(data[i][2]);
         }
-var ctx = document.getElementById("myChart").getContext("2d");
-var myBarChart = new Chart(ctx, {
-  type: 'bar',
-  options: {
-  scales: {
-    xAxes: [{
-      id: "bar-x-axis2",
-      stacked: true,
-      categoryPercentage: 0.5,
-      barPercentage: 0.5,
-    },  {
-      display: false,
-      id: "bar-x-axis1",
-      type: 'category',
-      categoryPercentage: 0.4,
-      barPercentage: 1,
-      gridLines: {
-        offsetGridLines: true
-      },
-      stacked: true
-    }],
-    yAxes: [{
-      max: 100,
-      min: 0,
-      stacked: true
-    }]
-
-  }
-},
-  data:{
-  labels: titulo,
-  datasets: [ {
-    label: "Target",
-    backgroundColor: 'red',
-    data: cantidad_a,
-    xAxisID: "bar-x-axis2",
-    stack: "background"
-  }, {
-    label: "Progreso",
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    data: cantidad_b,
-    xAxisID: "bar-x-axis2",
-    fill: false
-  }]
-}
-
-
-});
+        const ctx = document.getElementById('myChart');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: titulo,
+                datasets: [{
+                    label: '# of Votes',
+                    data: cantidad,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
     })
 
 }
