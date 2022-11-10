@@ -69,7 +69,7 @@ $sec="10";
                 <div class="py-3">
                     
                     <h1 class="">Modelo Actual</h1>
-                    <h1 class="">0000</h1>
+                    <h1 class="">2160</h1>
                 </div>
            
             </div>
@@ -244,13 +244,13 @@ var myBarChart = new Chart(ctx, {
   data:{
   labels: titulo,
   datasets: [ {
-    label: "Target",
-    backgroundColor: 'red',
+    label: "Inventario Real",
+    backgroundColor: 'rgba(255,0,0,0.6)',
     data: cantidad_a,
     xAxisID: "bar-x-axis2",
     stack: "background"
   }, {
-    label: "Progreso",
+    label: "Plan Cambio de modelo",
     backgroundColor: 'rgba(0,0,0,0.5)',
     data: cantidad_b,
     xAxisID: "bar-x-axis2",
