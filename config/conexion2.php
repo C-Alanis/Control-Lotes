@@ -5,6 +5,7 @@
    private $contrasena;
    private $BD;
    public $conexion;
+   
    public function __construct(){
 
     $this->servidor="localhost";

@@ -23,8 +23,6 @@ $m_actual="SELECT * FROM m_actual";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos AT</title>
 
-
-
     <link rel="stylesheet" href="style/css/estilos-uno.css">
     <link rel="stylesheet" href="style/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/css/style.css">
@@ -40,7 +38,7 @@ $m_actual="SELECT * FROM m_actual";
 <body class="" id="bodybg">
     <nav class="navbar navbar-expand-lg bg-danger">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fs-2 fw-bold" href="#">CONTROL DE LOTES</a>
+            <a class="navbar-brand text-white fs-2 fw-bold" href="sat.php">CONTROL DE LOTES</a>
         </div>
 
         <form class="container offset-md-7 text-center text-white" role="search">
@@ -57,9 +55,7 @@ $m_actual="SELECT * FROM m_actual";
                     <h4>Hora:&nbsp;</h4>
                     <h4 id="HoraActual"> </h4>
                 </div>
-
             </div>
-
         </form>
     </nav>
   
@@ -71,12 +67,16 @@ $m_actual="SELECT * FROM m_actual";
                 <div class="py-3">
                     
                     <h1 class="">Modelo Actual</h1>
+<<<<<<< HEAD
                     <?php
     $resultado=mysqli_query($conexion,$m_actual);
 
     while($row=mysqli_fetch_assoc($resultado)){?>
     <h1 class="col"><?php echo $row["T_Modelo"];?></h1><?php }?>
                     
+=======
+                    <h1 class=""></h1>
+>>>>>>> c3341b15ebf8bfa6c704504a82e10c79f09c499e
                 </div>
            
             </div>
@@ -175,8 +175,11 @@ $m_actual="SELECT * FROM m_actual";
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 <script>
 
