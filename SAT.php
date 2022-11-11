@@ -8,7 +8,7 @@ if(isset($_SERVER['HTTPS'])&& $_SERVER['HTTPS']==='on'){
     $url;
 }
 $page=$url;
-$sec="30";
+$sec="60";
 
 include("config/conexion.php");
 $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
@@ -82,7 +82,7 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
                 <div class="py-1">
                     <h2>Conteo de piezas</h2>
                     <br>
-                    <input type="text" placeholder="Escanea aqui" autocomplete="off" class="form-control" >
+                    <input type="text" placeholder="Escanea aqui" autocomplete="off" class="form-control">
                 </div>
             </div>
         </div>
@@ -94,8 +94,20 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
                     <form action="">
                         <br>
                         <h2>Solicitud de cambio de modelo</h2><br>
-                        <input type="text" placeholder="Numero de nomina" id="txt_1" autocomplete="off" class="form-control"> <br>
+                        <input type="text" placeholder="Numero de nomina" id="txt_1" autocomplete="off"
+                            class="form-control"> <br>
                         <button id="btn" disabled class="btn btn-info">Enviar</button>
+                        <?php                      echo '
+
+<script>
+
+alert("Piezas agregadas correctamente");
+
+    window.location="Control-Lotes/SAT.php";
+
+    </script>
+
+'; ?>
                     </form>
                     <script src="style/js/habilitar.js"></script>
                 </div>
