@@ -6,16 +6,10 @@ function HabilitarBoton(){
         val++;
     }
     if(val == 0){
-        document.getElementById("btn").disabled = true;
-        document.getElementById("flexRadioDefault1").disabled = true;
-        document.getElementById("flexRadioDefault2").disabled = true;
-        document.getElementById("flexRadioDefault3").disabled = true;
+        document.getElementById("txt_2").disabled = true;
     }
     else{
-        document.getElementById("btn").disabled = false;
-        document.getElementById("flexRadioDefault1").disabled = false;
-        document.getElementById("flexRadioDefault2").disabled = false;
-        document.getElementById("flexRadioDefault3").disabled = false;
+        document.getElementById("txt_2").disabled = false;
     }
 }
 document.getElementById("txt_1").addEventListener("keyup", HabilitarBoton);

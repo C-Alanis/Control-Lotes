@@ -29,6 +29,7 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
     <link rel="stylesheet" href="style/css/style.css">
     <script src="style/js/bootstrap.bundle.min.js"></script>
     <script src="style/js/habilitar.js"></script>
+    <script src="style/js/habilitar2.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
@@ -97,32 +98,15 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
                         <input type="text" placeholder="Numero de nomina" id="txt_1" autocomplete="off"
                             class="form-control"> <br>
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" disabled>
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Modelo 2160
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                                checked disabled>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                            Modelo 2150
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"
-                                checked disabled>
-                            <label class="form-check-label" for="flexRadioDefault3">
-                            Modelo 2140
-                            </label>
-                        </div>
+                        <input type="text" placeholder="Modelo" id="txt_2" autocomplete="off"
+                            class="form-control" disabled> <br>
 
                         <br>
                         <button id="btn" disabled class="btn btn-info">Enviar</button>
 
                     </form>
                     <script src="style/js/habilitar.js"></script>
+                    <script src="style/js/habilitar2.js"></script>
                 </div>
             </div>
         </div>
