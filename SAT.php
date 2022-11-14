@@ -96,18 +96,31 @@ $modelos="SELECT modelo FROM modelos ORDER BY id DESC LIMIT 1";
                         <h2>Solicitud de cambio de modelo</h2><br>
                         <input type="text" placeholder="Numero de nomina" id="txt_1" autocomplete="off"
                             class="form-control"> <br>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" disabled>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Modelo 2160
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                checked disabled>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                            Modelo 2150
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"
+                                checked disabled>
+                            <label class="form-check-label" for="flexRadioDefault3">
+                            Modelo 2140
+                            </label>
+                        </div>
+
+                        <br>
                         <button id="btn" disabled class="btn btn-info">Enviar</button>
-                        <?php                      echo '
 
-<script>
-
-alert("Piezas agregadas correctamente");
-
-    window.location="Control-Lotes/SAT.php";
-
-    </script>
-
-'; ?>
                     </form>
                     <script src="style/js/habilitar.js"></script>
                 </div>
